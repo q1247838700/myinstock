@@ -46,11 +46,6 @@ public class Order implements Serializable {
     private String buyCompanyId;
 
     /**
-     * 购买公司名字
-     */
-    private String buyCompanyName;
-
-    /**
      * 返利公司
      */
     private Integer rebateCompanyId;
@@ -106,7 +101,6 @@ public class Order implements Serializable {
             && (this.getPrice() == null ? other.getPrice() == null : this.getPrice().equals(other.getPrice()))
             && (this.getState() == null ? other.getState() == null : this.getState().equals(other.getState()))
             && (this.getBuyCompanyId() == null ? other.getBuyCompanyId() == null : this.getBuyCompanyId().equals(other.getBuyCompanyId()))
-            && (this.getBuyCompanyName() == null ? other.getBuyCompanyName() == null : this.getBuyCompanyName().equals(other.getBuyCompanyName()))
             && (this.getRebateCompanyId() == null ? other.getRebateCompanyId() == null : this.getRebateCompanyId().equals(other.getRebateCompanyId()))
             && (this.getRebateId() == null ? other.getRebateId() == null : this.getRebateId().equals(other.getRebateId()))
             && (this.getRebatePercent() == null ? other.getRebatePercent() == null : this.getRebatePercent().equals(other.getRebatePercent()))
@@ -126,7 +120,6 @@ public class Order implements Serializable {
         result = prime * result + ((getPrice() == null) ? 0 : getPrice().hashCode());
         result = prime * result + ((getState() == null) ? 0 : getState().hashCode());
         result = prime * result + ((getBuyCompanyId() == null) ? 0 : getBuyCompanyId().hashCode());
-        result = prime * result + ((getBuyCompanyName() == null) ? 0 : getBuyCompanyName().hashCode());
         result = prime * result + ((getRebateCompanyId() == null) ? 0 : getRebateCompanyId().hashCode());
         result = prime * result + ((getRebateId() == null) ? 0 : getRebateId().hashCode());
         result = prime * result + ((getRebatePercent() == null) ? 0 : getRebatePercent().hashCode());
@@ -149,7 +142,6 @@ public class Order implements Serializable {
         sb.append(", price=").append(price);
         sb.append(", state=").append(state);
         sb.append(", buyCompanyId=").append(buyCompanyId);
-        sb.append(", buyCompanyName=").append(buyCompanyName);
         sb.append(", rebateCompanyId=").append(rebateCompanyId);
         sb.append(", rebateId=").append(rebateId);
         sb.append(", rebatePercent=").append(rebatePercent);
