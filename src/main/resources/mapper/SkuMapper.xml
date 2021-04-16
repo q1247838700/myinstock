@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyg.instock.mapper.SkuMapper">
+
+    <resultMap id="BaseResultMap" type="com.lyg.instock.domain.Sku">
+            <id property="skuId" column="sku_id" jdbcType="INTEGER"/>
+            <result property="skuName" column="sku_name" jdbcType="VARCHAR"/>
+            <result property="weight" column="weight" jdbcType="INTEGER"/>
+            <result property="unit" column="unit" jdbcType="VARCHAR"/>
+            <result property="isTiny" column="is_tiny" jdbcType="INTEGER"/>
+            <result property="spuId" column="spu_id" jdbcType="VARCHAR"/>
+            <result property="brandId" column="brand_id" jdbcType="INTEGER"/>
+            <result property="skuPic" column="sku_pic" jdbcType="VARCHAR"/>
+            <result property="gmtCreated" column="gmt_created" jdbcType="TIMESTAMP"/>
+            <result property="gmtModifed" column="gmt_modifed" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        sku_id,sku_name,weight,
+        unit,is_tiny,spu_id,
+        brand_id,sku_pic,gmt_created,
+        gmt_modifed
+    </sql>
+</mapper>

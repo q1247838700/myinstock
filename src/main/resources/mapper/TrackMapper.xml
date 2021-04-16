@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyg.instock.mapper.TrackMapper">
+
+    <resultMap id="BaseResultMap" type="com.lyg.instock.domain.Track">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="trackId" column="track_id" jdbcType="VARCHAR"/>
+            <result property="trackCompanyId" column="track_company_id" jdbcType="VARCHAR"/>
+            <result property="trackCompanyName" column="track_company_name" jdbcType="VARCHAR"/>
+            <result property="describtion" column="describtion" jdbcType="VARCHAR"/>
+            <result property="orderId" column="order_id" jdbcType="VARCHAR"/>
+            <result property="transferId" column="transfer_id" jdbcType="VARCHAR"/>
+            <result property="transferName" column="transfer_name" jdbcType="VARCHAR"/>
+            <result property="state" column="state" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="VARCHAR"/>
+            <result property="gmtCreated" column="gmt_created" jdbcType="TIMESTAMP"/>
+            <result property="gmtModifed" column="gmt_modifed" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,track_id,track_company_id,
+        track_company_name,describtion,order_id,
+        transfer_id,transfer_name,state,
+        status,gmt_created,gmt_modifed
+    </sql>
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyg.instock.mapper.GoodsMapper">
+
+    <resultMap id="BaseResultMap" type="com.lyg.instock.domain.Goods">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="skuId" column="sku_id" jdbcType="INTEGER"/>
+            <result property="price" column="price" jdbcType="DECIMAL"/>
+            <result property="num" column="num" jdbcType="INTEGER"/>
+            <result property="orderId" column="order_id" jdbcType="INTEGER"/>
+            <result property="trackId" column="track_id" jdbcType="VARCHAR"/>
+            <result property="gmtCreated" column="gmt_created" jdbcType="TIMESTAMP"/>
+            <result property="gmtModifed" column="gmt_modifed" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,sku_id,price,
+        num,order_id,track_id,
+        gmt_created,gmt_modifed
+    </sql>
+</mapper>
